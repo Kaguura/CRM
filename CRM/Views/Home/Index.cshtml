@@ -1,0 +1,22 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+@Styles.Render("~/Content/css")
+@Scripts.Render("~/bundles/modernizr")
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/bootstrap")
+@Scripts.Render("~/bundles/script")
+@Scripts.Render("~/bundles/angularjs")
+@Scripts.Render("~/bundles/SPA")
+`
+
+<ul class="nav nav-tabs">
+    <li class="active"><a href="#students">Students</a></li>
+    <li><a href="#courses">Courses</a></li>
+    <li><a href="#events">Events</a></li>
+</ul>
+
+<div ng-app="App" ng-controller="StudentController">
+    <div ng-view></div>
+</div>

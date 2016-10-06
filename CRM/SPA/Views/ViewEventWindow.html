@@ -1,0 +1,33 @@
+﻿<table>
+    <tr>
+        <td>
+            <p>Course</p>
+        </td>
+        <td>
+            <select ng-model="data.event.CourseID" ng-options="x.CourseID as x.Title for x in data.courses">
+
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p>Student</p>
+        </td>
+        <td>
+            <select ng-model="data.event.StudentID" ng-options="x.ID as x.FirstName + ' ' + x.LastName for x in data.students"></select>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p>Date</p>
+        </td>
+        <td>
+            <input type="date" id="exampleInput" name="input" ng-model="data.date" placeholder="yyyy-MM-dd"/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input type="button" class="btn btn-success" value="Save" ng-click="Save()" />
+        </td>
+    </tr>
+</table>

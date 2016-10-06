@@ -1,0 +1,20 @@
+﻿<div class="container-fluid table-responsive">
+    <hr />
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th width="60%">Title</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="x in data">
+                <td>{{x.Title}}</td>
+                <td>
+                    <input type="button" class="btn btn-default" value="Edit" ng-click="ViewCourse(x)" />
+                    <input type="button" class="btn btn-danger" value="Delete" ng-click="Delete(x)" />
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <input type="button" class="btn btn-success" value="Add" ng-click="ViewCourse()" />
+</div>

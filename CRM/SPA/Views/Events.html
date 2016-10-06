@@ -1,0 +1,24 @@
+﻿<div class="container-fluid table-responsive">
+    <hr />
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th width="20%">Course</th>
+                <th width="20%">Student</th>
+                <th width="20%">Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="x in data">
+                <td>{{FindCourse(x.CourseID)}}</td>
+                <td>{{FindStudent(x.StudentID)}}</td>
+                <td>{{FilterDate(x.EventDate) | date: "dd/MM/yyyy"}}</td>
+                <td>
+                    <input type="button" class="btn btn-default" value="Edit" ng-click="ViewEvent(x)" />
+                    <input type="button" class="btn btn-danger" value="Delete" ng-click="Delete(x)" />
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <input type="button" class="btn btn-success" value="Add" ng-click="ViewEvent()" />
+</div>

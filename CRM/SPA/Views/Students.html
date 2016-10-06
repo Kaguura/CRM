@@ -1,0 +1,22 @@
+﻿<div class="container-fluid table-responsive">
+    <hr />
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th width="30%">FirstName</th>
+                <th width="30%">LastName</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="x in data">
+                <td>{{x.FirstName}}</td>
+                <td>{{x.LastName}}</td>
+                <td>
+                    <input type="button" class="btn btn-default" value="Edit" ng-click="ViewStudent(x)" />
+                    <input type="button" class="btn btn-danger" value="Delete" ng-click="Delete(x)" />
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <input type="button" class="btn btn-success" value="Add" ng-click="ViewStudent()" />
+</div>
