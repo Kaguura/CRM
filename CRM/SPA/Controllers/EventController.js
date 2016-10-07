@@ -56,11 +56,13 @@
     };
 
     $scope.ViewEvent = function (event) {
+        var date = null;
+        if (event != null) date = $scope.FilterDate(event.EventDate);
         var obj = {
             event: event,
             courses: $scope.courses,
             students: $scope.students,
-            date: $scope.FilterDate(event.EventDate)
+            date: date
         };
         var modalInstance = $uibModal.open({
             animation: true,
